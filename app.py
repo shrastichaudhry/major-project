@@ -554,13 +554,6 @@ PLANT_DB = {
 # ══════════════════════════════════════════════
 print("\n🌿 AyurScan starting...")
 
-if not os.path.exists(MODEL_PATH):
-    raise FileNotFoundError(
-        f"\n❌ Model not found: '{MODEL_PATH}'\n"
-        f"Place your .h5 file in the same folder as app.py\n"
-        f"Available .h5 files: ayurscan_81percent_BEST.h5"
-    )
-
 download_model_from_drive()
 print(f"   Loading model: {MODEL_PATH} ...")
 model = tf.keras.models.load_model(MODEL_PATH)
